@@ -3,12 +3,10 @@
 def print_fibonacci(length):
     if length == 0:
         print([])
-        return
-    
-    fib = [0]
-    if length > 1:
-        fib.append(1)
+    elif length == 1:
+        print([0])
+    else:
+        fib = [0, 1]
         for i in range(2, length):
             fib.append(fib[i-1] + fib[i-2])
-    
-    print(fib)
+        print(fib)
